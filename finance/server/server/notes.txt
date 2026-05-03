@@ -1,0 +1,19 @@
+pip install -U django-jazzmin
+
+
+
+Images and customization we need to change in 
+devfinancedashboard\finance\static\vendor\adminlte\img
+
+
+
+
+__________________________
+(import_export.formats.base_formats.CSV,
+ import_export.formats.base_formats.XLS,
+ import_export.formats.base_formats.XLSX,
+ import_export.formats.base_formats.TSV,
+ import_export.formats.base_formats.ODS,
+ import_export.formats.base_formats.JSON,
+ import_export.formats.base_formats.YAML,
+ import_export.formats.base_formats.HTML)

@@ -1,0 +1,72 @@
+{% extends "admin/change_list.html" %}
+{% load cache %}
+{% load static %} {% block extrahead %}
+{{ block.super }}
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        console.log("hellllllloooooo1111111")
+        $(document).on('change', "input:checkbox", function(){
+            console.log("hellllllloooooo")
+            var ischecked = $(this).is(':checked');
+            var row_data = new Array();
+            if (!ischecked){
+                row_data = {
+                    "id":get_id_from_url($(this).closest('tr').find('.field-entity a').attr('href')),
+                    "is_edited": ischecked
+                }
+                console.log('uncheckd ' ,row_data)
+            }
+            else{
+                row_data = {
+                    "id":get_id_from_url($(this).closest('tr').find('.field-entity a').attr('href')),
+                    "is_edited": ischecked
+                } 
+                console.log('checkd ', row_data)
+            }
+            auto_save(row_data)
+        });
+
+        $(document).on('change', '.vDateField', function(){
+            get_data($(this))
+        });
+        $(document).on('change', '.vTextField', function(){
+            get_data($(this))
+        });
+        function get_data(thisObj){
+            var row_data = new Array();
+            var data = thisObj.closest('tr');
+            row_data = {
+                "id":get_id_from_url(data.find('.field-entity a').attr('href')),
+                "target_date":data.find('.field-target_date input').val(),
+                "actual_date":data.find('.field-actual_date input').val(),
+                "remarks":data.find('.field-remarks input').val()
+            }
+            auto_save(row_data)
+        }
+        function get_id_from_url(url){
+            var url = url.split("/");
+            var id = url[url.length - 3]; 
+            return id
+        }
+        function auto_save(row_data){
+            $.ajax({ 
+                dataType: 'json',
+                data: JSON.stringify({'row_data': row_data}),
+                type: "POST",
+                url: '/api/save-example/',
+                headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                success: function(response) { 
+                    console.log(response)
+                },
+                error: function(e, x, r) { 
+                    console.log(e)
+                }
+            });
+        }
+    });
+    
+</script>
+{% endblock %}
