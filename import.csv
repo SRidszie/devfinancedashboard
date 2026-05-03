@@ -1,0 +1,6 @@
+﻿id,activity_name,entity,activity_type,quarter,month,periodicals,narations,due_date,target_date,actual_completion_date,event_modified,status
+1,CPF,Nityo Singapore Pte. Ltd.,Return,Q3,8,Quarterly,For Q2 FY 22,2022-06-28,2022-06-30,2022-07-07,2022-06-28 11:39:47,On_Time
+2,GST,Nityo Singapore Pte. Ltd.,payment,Q2,6,Quarterly,For Q2 FY 23,2022-06-28,2022-06-30,2022-07-08,2022-06-28 11:39:48,On_Time
+3,CPF,Nityo Singapore Pte. Ltd.,Return,Q3,5,Quarterly,For Q2 FY 24,2022-06-28,2022-06-30,2022-07-09,2022-06-28 11:39:49,On_Time
+4,GST,Nityo Singapore Pte. Ltd.,payment,Q2,3,Quarterly,For Q2 FY 25,2022-06-28,2022-06-30,2022-07-10,2022-06-28 11:39:50,On_Time
+5,Salry,Nityo Singapore Pte. Ltd.,payment,Q3,2,Quarterly,For Q2 FY 26,2022-06-28,2022-06-30,2022-07-11,2022-06-28 11:39:51,On_Time

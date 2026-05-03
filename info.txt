@@ -1,0 +1,40 @@
+Quarterly dashboard --
+
+--> All financial activies of all entities (NItyo etc)
+--> The sheet shall be released by the IT Team at the beginning of each quarter with a list of the standard activities with their usual due dates.
+
+--> mail trigger --> 
+
+trigger 1: 1 week before each due date, once a day at least , automatic e-mails should be sent by the system.
+
+--> The reminders should be sent by the system until the job is marked as completed and a completion date is assigned to the activity
+
+trigger 2:
+--> If the job is still undone until 2 days prior to the due date, a copy of the mail should be marked to the immediate reporting manager
+
+trigger 3:
+--> If the activity is still not completed at least 1 day prior to the due date, a copy of the reminder should be flagged to the Managing Director.
+
+--> There should be provision in the system to manually add new rows into the tracker.
+
+--> No deletions can be done by anyone in the Finance Team. Any deletion of an activity can happen only at the end of the IT Team at a request from the Finance Team.
+
+--> Please ask someone to run through the same and capture each and every activity that needs to be tracked for ease and control from a statutory point of view. 
+
+--> Once we have the tracker working for Nityo Singapore, we can replicate the same for all the other entities.
+
+
+
+#######################################################################
+django_framework
+
+fields selection(column name[activity_type, periodicals,narations,due_date,target_date,actual_completion_date
+template selection
+email required for email trigger
+
+
+
+status will be calculated 
+
+
+
